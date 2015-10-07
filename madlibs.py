@@ -48,11 +48,23 @@ def show_madlib():
     adjective = request.args.get("adjective")
     animal = request.args.get("animal")
     verbs = request.args.getlist("verb")
+    one_verb = None
+
+    if verbs:
+        last_verb = verbs[-1]
+    else:
+        last_verb = None
+    if len(verbs) == 1:
+        one_verb = verbs
+    if len(verbs) == 2:
+        first_verb = verbs[0]
+        last_verb = verbs[1]
 
 
 
     return render_template("madlib.html", person=person, color=color, noun=noun, 
-        adjective=adjective, animal=animal, verbs=verbs)
+        adjective=adjective, animal=animal, verbs=verbs, last_verb=last_verb, one_verb=one_verb,
+        first_verb=first_verb)
 
 
 

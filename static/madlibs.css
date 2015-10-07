@@ -1,0 +1,42 @@
+/* madlibs.css */
+@import url(https://fonts.googleapis.com/css?family=Shadows+Into+Light+Two);
+
+p {
+    font-family: Shadows Into Light Two;
+    letter-spacing: 1.5px;
+    font-size: 200%;
+    text-align: center;
+}
+
+body {
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPE8-hfdjpURaZYkzkxZonyLQmHCavKNdLnIxxdPKRNA8M-4jGLQ);
+}
+
+.pretty-container {
+
+    border-radius: 70px;
+    padding: 25px 45px;
+    border: 10px dashed #DF013A;
+    margin: 100px auto;
+    width: 60%;
+    background: url(/static/pink_rice/pink_rice.png);
+
+
+}
+
+.btn {
+  background: #DF013A;
+  background-image: -webkit-linear-gradient(top, #DF013A, #992241);
+  background-image: -moz-linear-gradient(top, #DF013A, #992241);
+  background-image: -ms-linear-gradient(top, #DF013A, #992241);
+  background-image: -o-linear-gradient(top, #DF013A, #992241);
+  background-image: linear-gradient(to bottom, #DF013A, #992241);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  font-family: Shadows Into Light Two;
+  border-radius: 28px;
+  color: #ffffff;
+  font-size: 100%;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}

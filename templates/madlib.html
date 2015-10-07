@@ -2,19 +2,35 @@
 <html>
 <head>
     <title>Madlibs!</title>
+    <link href='/static/madlibs.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
+    <div class="pretty-container">
     <p>There once was a {{ color }} {{ noun }} sitting in the Hackbright Lab. When {{ person }} went to pick it up, it burst into flames in a totally {{ adjective }} way.</p>
 
     <p> The {{ animal }} was not amused. The {{ animal }} resurrected the {{ color }} {{ noun }}.</p>
 
     <p>The {{ animal }} wouldn't 
         
+    {% if verbs %}
         {% for verb in verbs %}
-        {{ verb }},
+            {% if one_verb %}
+                {{ verb }}
+            {% elif verb == first_verb %}
+                {{ first_verb }}   
+            {% elif verb == last_verb %}
+                or {{ verb }}
+            {% else %}
+                {{ verb }},
+            {% endif %}
         {% endfor %}
+    {% else %}
+        touch 
+    {% endif %}
 
     that {{ noun }} for its life.</p>
-
+   
+  <p><a href="http://www.google.com"><button class="btn">Go home!</button></a></p>
+</div>
 </body>
 </html>
